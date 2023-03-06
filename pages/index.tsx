@@ -33,6 +33,16 @@ const tabs = [
     display: 'Other'
   }
 ]
+const images = [
+  photo1,
+  photo2,
+  photo3,
+  photo4,
+  photo5,
+  photo6,
+  photo7,
+  photo8
+]
 
 export default function Home() {
   return (
@@ -44,14 +54,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className='fixed top -0 w-full z-10 flex justify-between items-center h-[90px] px-6'>
+      <header className='fixed top -0 w-full z-20 flex justify-between items-center h-[90px] px-6'>
         <span className='uppercase text-lg font-medium'>Portfolio</span>
         <Link href='#' className='rounded-3xl bg-white text-stone-700 px-3 py-2 hover:bg-opacity-90'>
           Get in touch
         </Link>
       </header>
 
-      <main className='bg-black pt-[110px]'>
+      <main className='bg-black pt-[110px] z-20'>
         <div className='flex flex-col items-center h-full'>
           <Tab.Group>
             <Tab.List className='flex items-center gap-12'>
@@ -70,22 +80,11 @@ export default function Home() {
             <Tab.Panels className='h-full max-w-[900px] w-full p-2 sm:p-4 my-6'>
               <Tab.Panel className=''>
                 <Masonry breakpointCols={2} className='flex gap-4' columnClassName=''>
-                  <Image src={photo2} alt='portfolio photo' className='my-4' />
-                  <Image src={photo3} alt='portfolio photo' className='my-4' />
-                  <Image src={photo4} alt='portfolio photo' className='my-4' />
-                  <Image src={photo5} alt='portfolio photo' className='my-4' />
-                  <Image src={photo1} alt='portfolio photo' className='my-4' />
-                  <Image src={photo6} alt='portfolio photo' className='my-4' />
-                  <Image src={photo7} alt='portfolio photo' className='my-4' />
-                  <Image src={photo8} alt='portfolio photo' className='my-4' />
+                  
+                  {images.map(image => (
+                    <Image src={image} alt='portfolio photo' className='my-4' placeholder='blur' key={image.src}/>
+                  ))}
 
-
-                  {/* <img src='/1.jpg' alt='photo 1' className='my-4' />
-                  <img src='/2.jpg' alt='photo 2' className='my-4' />
-                  <img src='/3.jpg' alt='photo 3' className='my-4' />
-                  <img src='/4.jpg' alt='photo 4' className='my-4' />
-                  <img src='/5.jpg' alt='photo 5' className='my-4' />
-                  <img src='/6.jpg' alt='photo 6' className='my-4' /> */}
                 </Masonry>
               </Tab.Panel>
               <Tab.Panel>Street Photography</Tab.Panel>
@@ -96,7 +95,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className='h-[90px] flex justify-center items-center uppercase text-large font-medium'>
+      <footer className='h-[90px] flex justify-center items-center uppercase text-large font-medium z-20'>
         <p>Portfolio</p>
       </footer>
     </div>
