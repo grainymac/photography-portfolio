@@ -5,6 +5,14 @@ import { Inter } from 'next/font/google'
 import { Tab } from '@headlessui/react'
 import Masonry from 'react-masonry-css'
 import classNames from 'classnames'
+import photo1 from '../public/1.jpg'
+import photo2 from '../public/2.jpg'
+import photo3 from '../public/3.jpg'
+import photo4 from '../public/4.jpg'
+import photo5 from '../public/5.jpg'
+import photo6 from '../public/6.jpg'
+import photo7 from '../public/7.jpg'
+import photo8 from '../public/8.jpg'
 
 const inter = Inter({ subsets: ['latin'] })
 const tabs = [
@@ -62,12 +70,22 @@ export default function Home() {
             <Tab.Panels className='h-full max-w-[900px] w-full p-2 sm:p-4 my-6'>
               <Tab.Panel className=''>
                 <Masonry breakpointCols={2} className='flex gap-4' columnClassName=''>
-                  <img src='/1.jpg' alt='photo 1' className='my-4' />
+                  <Image src={photo2} alt='portfolio photo' className='my-4' />
+                  <Image src={photo3} alt='portfolio photo' className='my-4' />
+                  <Image src={photo4} alt='portfolio photo' className='my-4' />
+                  <Image src={photo5} alt='portfolio photo' className='my-4' />
+                  <Image src={photo1} alt='portfolio photo' className='my-4' />
+                  <Image src={photo6} alt='portfolio photo' className='my-4' />
+                  <Image src={photo7} alt='portfolio photo' className='my-4' />
+                  <Image src={photo8} alt='portfolio photo' className='my-4' />
+
+
+                  {/* <img src='/1.jpg' alt='photo 1' className='my-4' />
                   <img src='/2.jpg' alt='photo 2' className='my-4' />
                   <img src='/3.jpg' alt='photo 3' className='my-4' />
                   <img src='/4.jpg' alt='photo 4' className='my-4' />
                   <img src='/5.jpg' alt='photo 5' className='my-4' />
-                  <img src='/6.jpg' alt='photo 6' className='my-4' />
+                  <img src='/6.jpg' alt='photo 6' className='my-4' /> */}
                 </Masonry>
               </Tab.Panel>
               <Tab.Panel>Street Photography</Tab.Panel>
