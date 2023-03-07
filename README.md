@@ -1,4 +1,4 @@
-#Photography Portfolio
+# Photography Portfolio
 
 ## Abstract
 I originally had my own photography website built on squarespace, but now that I develop applications, I decided to build my own.  It is a single page application where the user can click the photo for an enlarge version and then view a carousel gallery.
