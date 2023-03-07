@@ -1,4 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#Photography Portfolio
+
+## Abstract
+I originally had my own photography website built on squarespace, but now that I develop applications, I decided to build my own.  It is a single page application where the user can click the photo for an enlarge version and then view a carousel gallery.
+
+
+## Goals and Objectives
+ - Build a single page portfolio showcasing my photography
+ - Discover and use new frameworks and libraries
+ - Have a Masony template
+ - Have a Gallery view
+ 
+## Challenges
+ - Find a way to pull my photos from an API rather than local storage
+ - getting used to Next.js and Typescript syntax
+ - Setting up Tailwind CSS configurations
+ 
+ ## Technologies
+ <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='JavaScript' src='https://img.shields.io/badge/Javascript-100000?style=for-the-badge&logo=JavaScript&logoColor=FFE600&labelColor=black&color=black'/></a>
+ <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='React' src='https://img.shields.io/badge/react-100000?style=for-the-badge&logo=React&logoColor=4FAAFF&labelColor=black&color=black'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='TypeScript' src='https://img.shields.io/badge/Typescript-100000?style=for-the-badge&logo=TypeScript&logoColor=0379FF&labelColor=000000&color=000000'/></a>
+ <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='Tailwind CSS' src='https://img.shields.io/badge/Tailwind_CSS-100000?style=for-the-badge&logo=Tailwind CSS&logoColor=00D0C9&labelColor=000000&color=000000'/></a>
+ <a href='https://github.com/shivamkapasia0' target="_blank"><img alt='Next.js' src='https://img.shields.io/badge/Next.js-100000?style=for-the-badge&logo=Next.js&logoColor=FFFFFF&labelColor=000000&color=000000'/></a>
+ 
+ ## Features
+  - [react masonry css](https://www.npmjs.com/package/react-masonry-css)
+  - [lightgallery.js](https://www.lightgalleryjs.com/)
+  - [next.js](https://nextjs.org/)
+  - [typescript](https://www.typescriptlang.org/)
+  - [tailwind css](https://tailwindcss.com/)
+  
+## Deployed At
+ - [Photography Portfolio](https://ianmac-photography.vercel.app/)
 
 ## Getting Started
 
@@ -21,18 +53,3 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
