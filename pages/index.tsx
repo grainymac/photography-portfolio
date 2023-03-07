@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google'
 import { Tab } from '@headlessui/react'
 import Masonry from 'react-masonry-css'
 import classNames from 'classnames'
+
+//import photos
 import photo1 from '../public/1.jpg'
 import photo2 from '../public/2.jpg'
 import photo3 from '../public/3.jpg'
@@ -13,6 +15,19 @@ import photo5 from '../public/5.jpg'
 import photo6 from '../public/6.jpg'
 import photo7 from '../public/7.jpg'
 import photo8 from '../public/8.jpg'
+
+import type { LightGallery } from 'lightgallery/lightgallery'
+import LightGalleryComponent from 'lightgallery/react';
+
+// import styles
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
+import { useRef } from 'react'
+
 
 const inter = Inter({ subsets: ['latin'] })
 const tabs = [
@@ -45,6 +60,8 @@ const images = [
 ]
 
 export default function Home() {
+  const lightboxRef = useRef < LightGallery | null > (null)
+
   return (
     <div className='flex flex-col h-full bg-black overflow-auto'>
       <Head>
@@ -81,11 +98,33 @@ export default function Home() {
               <Tab.Panel className=''>
                 <Masonry breakpointCols={2} className='flex gap-4' columnClassName=''>
                   
-                  {images.map(image => (
-                    <Image src={image} alt='portfolio photo' className='my-4' placeholder='blur' key={image.src}/>
+                  {images.map((image, idx) => (
+                    <Image 
+                      src={image} 
+                      alt='portfolio photo' 
+                      className='my-4 hover:opacity-90 cursor-pointer' 
+                      placeholder='blur' 
+                      key={image.src}
+                      onClick={() => {
+                        lightboxRef.current?.openGallery(idx)
+                      }}/>
                   ))}
 
                 </Masonry>
+
+                <LightGalleryComponent 
+                  onInit={(ref) => {
+                    if (ref) {
+                      lightboxRef.current = ref.instance
+                    }
+                  }} 
+                  speed={500} 
+                  plugins={[lgThumbnail, lgZoom]} 
+                  dynamic 
+                  dynamicEl={images.map(image => ({
+                    src: image.src,
+                    thumb: image.src,
+                  }))}/>
               </Tab.Panel>
               <Tab.Panel>Street Photography</Tab.Panel>
               <Tab.Panel>Portrait Photography</Tab.Panel>
