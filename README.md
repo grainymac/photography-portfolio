@@ -1,4 +1,6 @@
 # Photography Portfolio
+<img width="1219" alt="Screenshot 2023-05-15 at 7 56 30 PM" src="https://github.com/grainymac/photography-portfolio/assets/106535343/6a5ee11b-0730-4e66-bbce-ceb01c12b4fd">
+
 
 ## Abstract
 I originally had my own photography website built on squarespace, but now that I develop applications, I decided to build my own.  It is a single page application where the user can click the photo for an enlarge version and then view a carousel gallery.
