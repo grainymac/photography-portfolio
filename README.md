@@ -32,7 +32,7 @@ I originally had my own photography website built on squarespace, but now that I
   - [tailwind css](https://tailwindcss.com/)
   
 ## Deployed At
- - [Photography Portfolio](https://ianmac-photos.vercel.app/)
+ - [Photography Portfolio](https://imphotos.vercel.app/)
 
 ## Getting Started
 
